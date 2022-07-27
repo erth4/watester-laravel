@@ -9,7 +9,7 @@ class WatesterController extends Controller
     public function index()
     {
         $data = [
-            'receiver' => '6281273812533', // remove [ and ]
+            'receiver' => '628123456789', // remove [ and ]
             'message' => 'test api wa'
         ];
         
@@ -26,7 +26,7 @@ class WatesterController extends Controller
                 CURLOPT_CUSTOMREQUEST => "POST",
                 CURLOPT_POSTFIELDS => http_build_query($data),
                 CURLOPT_HTTPHEADER => array(
-                        "Authorization: Bearer 3ade2cecc90d41735bce7e01a19079ab2a5c144f", // remove { and }
+                        "Authorization: Bearer secret key device", // remove { and }
                         "Content-Type: application/x-www-form-urlencoded"
                 ),
         ));
